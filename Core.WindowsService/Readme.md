@@ -12,8 +12,8 @@
 
 # Steps
 
-1. dotnet new worker --name Core.WindowService
-1. dotnet add package Microsoft.Extensions.Hosting.WindowsServices
+1. dotnet new worker --name Core.WindowsService
+1. dotnet add package Microsoft.Extensions.Hosting.WindowsServices -s https://api.nuget.org/v3/index.json
 1. dotnet add package Microsoft.Extensions.Http
 1. edit code ...
 
