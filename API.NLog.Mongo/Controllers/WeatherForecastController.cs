@@ -26,8 +26,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     async public Task<IEnumerable<WeatherForecast>> Get()
     {
-//        using (_logger.BeginScope("Station at {station}", "ConnellsPoint"))
-        using (_logger.BeginScope(new[] { new KeyValuePair<string, object>("userid", "sam") }))
+        using (_logger.BeginScope(new[] { new KeyValuePair<string, object>("JobId", Guid.NewGuid()), new KeyValuePair<string, object>("UserId", "Sammy") }))
         {
             _logger.LogInformation("getting weather forecast at {forcast_time}", DateTime.Now);
             await _forecastService.Forecast();
